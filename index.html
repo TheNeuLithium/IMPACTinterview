@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>IMPACT Artists Interviews</title>
+
+      <!-- import the webpage's stylesheet -->
+      <link rel="stylesheet" href="style.css" />
+       <script
+      src="https://kit.fontawesome.com/05e3842e9b.js"
+      crossorigin="anonymous"
+    ></script>
+      
+    </head>
+    <body>
+      <div id="title">
+        <h1>
+          IMPACT 2021
+        </h1>
+        <h2>
+          REPLAY - Artist Interview
+        </h2>
+        <br />
+        <p>
+          Unconventional circumstances make for unconventional art. This year’s
+          IMPACT Performance Festival took place virtually on the weekend of
+          April 17 & 18, 2021. For this collaboration, TNL brings to you short
+          1ON1 sessions with all eight participating artists with a limited-run
+          replay of their performances.
+        </p>
+        <br />
+        <p style="font-size:2vh; font-weight:100; opacity:1;">
+          May 3 - 10, each day there will be one interview to be released.
+          <br />May 10 - 19, IMPACT 24/7 Replay. <br />*Click the icon below to
+          read each artist interview.
+        </p>
+        <hr style="color:white;opacity:0.5;" />
+      </div>
+
+      <div id="headshot_Wrapper"></div>
+
+      <br />
+      <div id="interview">
+        <div>
+          <p class="aritstName" id="name"></p>
+        </div>
+        <div>
+          <p id="socialMedia"></p>
+        </div>
+        <br /><br />
+        <div>
+          <p id="q1">Tell us a little about you and your art interests.</p>
+          <p class="answers" id="a1">(......)</p>
+        </div>
+        <div>
+          <p id="q2">Give us some insights into the work you presented at IMPACT.</p>
+          <p class="answers" id="a2">(.......)</p>
+        </div>
+        <div>
+          <p id="q3">
+           In what ways did the virtual presentation this year challenge you?
+          </p>
+          <p class="answers" id="a3">(......)</p>
+        </div>
+        <div>
+          <p id="q4">  Would you continue to use virtual components when you get to perform in person?</p>
+          <p class="answers" id="a4"></p>
+         
+        </div>
+        <div>
+          <p id="q5"> 
+        Which one do you find yourself agreeing with the most?  </p><br> 
+          <p class="answers" ><i class="far fa-square" id="a5_1"></i> I loved the Zoom performance! I definitely see myself doing more virtual performances in the future.</p><br>
+          <p class="answers" ><i class="far fa-square" id="a5_2"></i> I have my reservation with the virtual format. It is effective but also problematic.</p><br>
+          <p class="answers" ><i class="far fa-square"></i> The performer should always be present with a live audience. See you in real life!</p>
+        </div>
+        <div>
+          <p id="q6">
+            What are some ways in which organizations, curators and festival organizers can better support you in a virtual environment?
+          </p>
+          <p class="answers" id="a6">(......)</p>
+        </div>
+        <p style="color:white; font-size:2vh;font-weight:100;">
+          (These interviews were edited for clarity.)
+        </p>
+        <br />
+
+        <div id="img_Wrapper">
+          <img id="img_1" />
+          <img id="img_2" />
+          <img id="img_3" />
+        </div>
+        <p id="credit"></p>
+      </div>
+
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
+      <script>
+        var random = [];
+        var randomX = [];
+        var randomY = [];
+        var img1, img2, img3, img4, img5, img6, img7, img8;
+
+        var d = new Date();
+        var n = d.getDate();
+
+        var day3, day4, day5, day6, day7, day8, day9;
+
+        function getRandomPosition(element) {
+          var randomV1 = 17; //h
+          var randomV2 = 16; //w
+
+          var random1 = [
+            1 / randomV1,
+            3 / randomV1,
+            5 / randomV1,
+            7 / randomV1,
+            9 / randomV1,
+            11 / randomV1,
+            13 / randomV1,
+            15 / randomV1
+          ].sort(() => 0.5 - Math.random());
+          var random2 = [
+            1 / randomV2,
+            3 / randomV2,
+            5 / randomV2,
+            7 / randomV2,
+            9 / randomV2,
+            11 / randomV2,
+            13 / randomV2,
+            15 / randomV2
+          ].sort(() => 0.5 - Math.random());
+
+          var x = window.innerHeight;
+          var y = window.innerWidth;
+
+          for (let i = 0; i < 8; i++) {
+            if (window.matchMedia("(max-width: 400px)").matches) {
+              var randomNumX = 0.5 * random1[i] * x; //0,8
+              var randomNumY = 0.5 * random2[i] * y;//0,4
+            } else {
+              var randomNumX = 0.5 * random1[i] * x;
+              var randomNumY = 0.7 * random2[i] * y;
+            }
+
+            randomX.push(randomNumX);
+            randomY.push(randomNumY);
+          }
+        }
+
+        window.onload = function() {
+          day3 = 1;
+          day4 = 1;
+          day5 = 1;
+          day6 = 1;
+          day7 = 1;
+          day8 = 1;
+          day9 = 1;
+          
+          img1 = document.createElement("img");
+          img1.setAttribute(
+            "src",
+            "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FAnna%20Schwartz.JPG?v=1619899367700"
+          );
+          document.getElementById("headshot_Wrapper").appendChild(img1);
+          img1.style.cursor = "pointer"; 
+          var xy1 = getRandomPosition(img1);
+          img1.style.top = randomX[0] + "px";
+          img1.style.top = randomX[0] + "px";
+          img1.style.left = randomY[0] + "px";
+          
+          img2 = document.createElement("img");
+          img2.setAttribute(
+            "src",
+            "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2F05%20Ben.jpg?v=1619984308410"
+          );
+          document.getElementById("headshot_Wrapper").appendChild(img2);
+          img2.style.cursor = "pointer"; 
+          var xy2 = getRandomPosition(img2);
+          img2.style.top = randomX[1] + "px";
+          img2.style.left = randomY[1] + "px";
+
+          img3 = document.createElement("img");
+          if (n >= day4) {
+            img3.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FCDSHeadshot_Square.jpg?v=1619984647765"
+            );
+            img3.style.cursor = "pointer"; 
+          } else {
+            img3.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FhandsanitizerArtboard%202qr.png?v=1619825993051"
+            );
+            img3.style.cursor = "none"; 
+          }
+          document.getElementById("headshot_Wrapper").appendChild(img3);
+          var xy3 = getRandomPosition(img2);
+          img3.style.top = randomX[2] + "px";
+          img3.style.left = randomY[2] + "px";
+
+          img4 = document.createElement("img");
+          if (n >= day5) {
+            img4.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FDJHeadshot.jpg?v=1619899366114"
+            );
+            img4.style.cursor = "pointer"; 
+          } else {
+            img4.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FhandsanitizerArtboard%205qr.png?v=1619825993094"
+            );
+            img4.style.cursor = "none"; 
+          }
+          document.getElementById("headshot_Wrapper").appendChild(img4);
+          var xy4 = getRandomPosition(img4);
+          img4.style.top = randomX[3] + "px";
+          img4.style.left = randomY[3] + "px";
+
+          img5 = document.createElement("img");
+          if (n >= day6) {
+            img5.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FJordanHeadshot.png?v=1619984417314"
+            );
+            img5.style.cursor = "pointer"; 
+          } else {
+            img5.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FhandsanitizerArtboard%203qr.png?v=1619825993144"
+            );
+            img5.style.cursor = "none"; 
+          }
+          document.getElementById("headshot_Wrapper").appendChild(img5);
+          var xy5 = getRandomPosition(img5);
+          img5.style.top = randomX[4] + "px";
+          img5.style.left = randomY[4] + "px";
+
+          img6 = document.createElement("img");
+          if (n >= day7) {
+            img6.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2Fllio%20sophia%20headshot.JPG?v=1619984443403"
+            );
+            img6.style.cursor = "pointer"; 
+          } else {
+            img6.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FhandsanitizerArtboard%206qr.png?v=1619825993316"
+            );
+            img6.style.cursor = "none"; 
+          }
+          document.getElementById("headshot_Wrapper").appendChild(img6);
+          var xy6 = getRandomPosition(img6);
+          img6.style.top = randomX[5] + "px";
+          img6.style.left = randomY[5] + "px";
+
+          img7 = document.createElement("img");
+          if (n >= day8) {
+            img7.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2Fcor_4Cropped.png?v=1620082966314"
+            );
+            img7.style.cursor = "pointer"; 
+          } else {
+            img7.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FhandsanitizerArtboard%202qr.png?v=1619825993051"
+            );
+            img7.style.cursor = "none"; 
+          }
+          document.getElementById("headshot_Wrapper").appendChild(img7);
+          var xy7 = getRandomPosition(img7);
+          img7.style.top = randomX[6] + "px";
+          img7.style.left = randomY[6] + "px";
+
+          img8 = document.createElement("img");
+          if (n >= day9) {
+            img8.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FCropped%20headshot%20.jpg?v=1619984641526"
+            );
+            img8.style.cursor = "pointer"; 
+          } else {
+            img8.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FhandsanitizerArtboard%202qr.png?v=1619825993051"
+            );
+            img8.style.cursor = "none"; 
+          }
+          document.getElementById("headshot_Wrapper").appendChild(img8);
+          var xy8 = getRandomPosition(img8);
+          img8.style.top = randomX[7] + "px";
+          img8.style.left = randomY[7] + "px";
+        };
+
+        fetch("answers.json")
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(data) {
+            appendData(data);
+            // console.log(data);
+          })
+          .catch(function(err) {
+            console.log("error:" + err);
+          });
+
+        function appendData(data) {
+          img1.addEventListener("click", function() {
+            document.getElementById("name").innerHTML = data[0].yourFullName;
+            document.getElementById("a1").innerHTML = data[0].Q1;
+            document.getElementById("a2").innerHTML = data[0].Q2;
+            document.getElementById("a3").innerHTML = data[0].Q3;
+            document.getElementById("a4").innerHTML = data[0].Q4;
+            document.getElementById("a5_2").classList.toggle('fa-check-square');
+            document.getElementById("a5_2").classList.add('fa-square');
+            document.getElementById("a5_1").classList.remove('fa-square');
+            document.getElementById("a5_1").classList.add('fa-check-square');
+            document.getElementById("a6").innerHTML = data[0].Q6;
+            document.getElementById("socialMedia").innerHTML =
+              data[0].socialMedia;
+
+            img_1.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FASchwartz%201.png?v=1619984802901"
+            );
+            document.getElementById("img_Wrapper").appendChild(img_1);
+            img_2.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FASchwartz%202.png?v=1619984803457"
+            );
+            document.getElementById("img_Wrapper").appendChild(img_2);
+            img_3.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FASchwartz3.png?v=1619984805134"
+            );
+            document.getElementById("img_Wrapper").appendChild(img_3);
+            document.getElementById("credit").innerHTML = data[0].credit;
+          });
+
+          img2.addEventListener("click", function() {
+            document.getElementById("name").innerHTML = data[1].yourFullName;
+            document.getElementById("a1").innerHTML = data[1].Q1;
+            document.getElementById("a2").innerHTML = data[1].Q2;
+            document.getElementById("a3").innerHTML = data[1].Q3;
+            document.getElementById("a4").innerHTML = data[1].Q4;
+            document.getElementById("a5_2").classList.toggle('fa-check-square');
+            document.getElementById("a5_2").classList.add('fa-square');
+            document.getElementById("a5_1").classList.remove('fa-square');
+            document.getElementById("a5_1").classList.add('fa-check-square');
+            
+            document.getElementById("a6").innerHTML = data[1].Q6;
+            document.getElementById("socialMedia").innerHTML =
+              data[1].socialMedia;
+
+            img_1.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2F01_Space.jpeg?v=1619984825610"
+            );
+            document.getElementById("img_Wrapper").appendChild(img_1);
+            img_2.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2F02_Laura%20Does%20Not%20Cry.jpeg?v=1619984823465"
+            );
+            document.getElementById("img_Wrapper").appendChild(img_2);
+            img_3.setAttribute(
+              "src",
+              "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2F01_Space.jpeg?v=1619984825610"
+            );
+            document.getElementById("img_Wrapper").appendChild(img_3);
+            document.getElementById("credit").innerHTML = data[1].credit;
+          });
+
+          if (n > day4) {
+            img3.addEventListener("click", function() {
+              document.getElementById("name").innerHTML = data[2].yourFullName;
+              document.getElementById("a1").innerHTML = data[2].Q1;
+              document.getElementById("a2").innerHTML = data[2].Q2;
+              document.getElementById("a3").innerHTML = data[2].Q3;
+              document.getElementById("a4").innerHTML = data[2].Q4;
+              document.getElementById("a5_1").classList.toggle('fa-check-square');
+              document.getElementById("a5_1").classList.add('fa-square');
+              document.getElementById("a5_2").classList.remove('fa-square');
+              document.getElementById("a5_2").classList.add('fa-check-square');
+              document.getElementById("a6").innerHTML = data[2].Q6;
+              document.getElementById("socialMedia").innerHTML =
+                data[2].socialMedia;
+
+              img_1.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FEtudes_still1.png?v=1619985002505"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_1);
+              img_2.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FEtudes_still2.png?v=1619985003060"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_2);
+              img_3.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FEtudes_still4.png?v=1620083347040"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_3);
+              document.getElementById("credit").innerHTML = data[2].credit;
+            });
+          }
+
+          if (n >= day5) {
+            img4.addEventListener("click", function() {
+              document.getElementById("name").innerHTML = data[3].yourFullName;
+              document.getElementById("a1").innerHTML = data[3].Q1;
+              document.getElementById("a2").innerHTML = data[3].Q2;
+              document.getElementById("a3").innerHTML = data[3].Q3;
+              document.getElementById("a4").innerHTML = data[3].Q4;
+              document.getElementById("a5_2").classList.toggle('fa-check-square');
+              document.getElementById("a5_2").classList.add('fa-square');
+              document.getElementById("a5_1").classList.remove('fa-square');
+              document.getElementById("a5_1").classList.add('fa-check-square');
+              document.getElementById("a6").innerHTML = data[3].Q6;
+              document.getElementById("socialMedia").innerHTML =
+                data[3].socialMedia;
+
+              img_1.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FAccessAlone0.png?v=1619985118726"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_1);
+              img_2.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FAccessAlone1.png?v=1619985120156"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_2);
+              img_3.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FAccessAlone2.png?v=1619985121740"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_3);
+              document.getElementById("credit").innerHTML = data[3].credit;
+            });
+          }
+
+          if (n >= day6) {
+            img5.addEventListener("click", function() {
+              document.getElementById("name").innerHTML = data[4].yourFullName;
+              document.getElementById("a1").innerHTML = data[4].Q1;
+              document.getElementById("a2").innerHTML = data[4].Q2;
+              document.getElementById("a3").innerHTML = data[4].Q3;
+              document.getElementById("a4").innerHTML = data[4].Q4;
+              document.getElementById("a5_1").classList.toggle('fa-check-square');
+              document.getElementById("a5_1").classList.add('fa-square');
+              document.getElementById("a5_2").classList.remove('fa-square');
+              document.getElementById("a5_2").classList.add('fa-check-square');
+              document.getElementById("a6").innerHTML = data[4].Q6;
+              document.getElementById("socialMedia").innerHTML =
+                data[4].socialMedia;
+
+              img_1.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FJordan%20Knecht%20Pareidolia%20part%20III.png?v=1619985257043"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_1);
+              img_2.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FJordan%20Knecht%20Pareidolia%20Part%20II.png?v=1619985257351"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_2);
+              img_3.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FJordan%20Knecht%20Pareidolia%20Part%20I.png?v=1619985258650"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_3);
+              document.getElementById("credit").innerHTML = data[4].credit;
+            });
+          }
+          if (n >= day7) {
+            img6.addEventListener("click", function() {
+              document.getElementById("name").innerHTML = data[5].yourFullName;
+              document.getElementById("a1").innerHTML = data[5].Q1;
+              document.getElementById("a2").innerHTML = data[5].Q2;
+              document.getElementById("a3").innerHTML = data[5].Q3;
+              document.getElementById("a4").innerHTML = data[5].Q4;
+              document.getElementById("a5_2").classList.toggle('fa-check-square');
+              document.getElementById("a5_2").classList.add('fa-square');
+              document.getElementById("a5_1").classList.remove('fa-square');
+              document.getElementById("a5_1").classList.add('fa-check-square');
+              document.getElementById("a6").innerHTML = data[5].Q6;
+              document.getElementById("socialMedia").innerHTML =
+                data[5].socialMedia;
+
+              img_1.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2Froom%20of%20leaves.jpg?v=1619985270641"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_1);
+              img_2.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2Ftall%20chair.jpg?v=1619985271110"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_2);
+              img_3.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2Fthe%20bird.png?v=1619985272441"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_3);
+              document.getElementById("credit").innerHTML = data[5].credit;
+            });
+          }
+          if (n >= day8) {
+            img7.addEventListener("click", function() {
+              document.getElementById("name").innerHTML = data[6].yourFullName;
+              document.getElementById("a1").innerHTML = data[6].Q1;
+              document.getElementById("a2").innerHTML = data[6].Q2;
+              document.getElementById("a3").innerHTML = data[6].Q3;
+              document.getElementById("a4").innerHTML = data[6].Q4;
+              document.getElementById("a5_1").classList.toggle('fa-check-square');
+              document.getElementById("a5_1").classList.add('fa-square');
+              document.getElementById("a5_2").classList.remove('fa-square');
+              document.getElementById("a5_2").classList.add('fa-check-square');
+              document.getElementById("a6").innerHTML = data[6].Q6;
+              document.getElementById("socialMedia").innerHTML =
+                data[6].socialMedia;
+
+              img_1.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2Fcor_1.png?v=1620083047122"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_1);
+              img_2.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2Fcor_2.png?v=1620082927234"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_2);
+              img_3.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2Fcor_5.PNG?v=1620083114852"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_3);
+              document.getElementById("credit").innerHTML = data[6].credit;
+            });
+          }
+          if (n >= day9) {
+            img8.addEventListener("click", function() {
+              document.getElementById("name").innerHTML = data[7].yourFullName;
+              document.getElementById("a1").innerHTML = data[7].Q1;
+              document.getElementById("a2").innerHTML = data[7].Q2;
+              document.getElementById("a3").innerHTML = data[7].Q3;
+              document.getElementById("a4").innerHTML = data[7].Q4;
+              document.getElementById("a5_1").classList.toggle('fa-check-square');
+              document.getElementById("a5_1").classList.add('fa-square');
+              document.getElementById("a5_2").classList.remove('fa-square');
+              document.getElementById("a5_2").classList.add('fa-check-square');
+              document.getElementById("a6").innerHTML = data[7].Q6;
+              document.getElementById("socialMedia").innerHTML =
+                data[7].socialMedia;
+
+              img_1.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FScreen%20Shot%202021-04-28%20at%201.47.58%20PM.png?v=1619985383345"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_1);
+              img_2.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FScreen%20Shot%202021-04-28%20at%201.50.52%20PM.png?v=1619985387987"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_2);
+              img_3.setAttribute(
+                "src",
+                "https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2FScreen%20Shot%202021-04-28%20at%201.52.57%20PM.png?v=1619985399978"
+              );
+              document.getElementById("img_Wrapper").appendChild(img_3);
+              document.getElementById("credit").innerHTML = data[7].credit;
+            });
+          }
+        }
+        
+        //BACK TO TOP BUTTON
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 400;
+        }
+      </script>
+    </body>
+  </html>
+</html>

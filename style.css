@@ -1,0 +1,156 @@
+/* CSS files add styling rules to your content */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap');
+
+body {
+  font-family: 'Prompt', sans-serif;
+  margin: 2em;
+  padding-left:5em;
+  padding-right:5em;
+  background-image: linear-gradient(to right, #fbd7f1 , #d7e2d2, #d7faf8);
+}
+
+h1 {
+  color: #5731ef;
+  font-size: 25vh;
+  font-weight:500;
+   line-height: 0.6;
+}
+h2{
+  color: #ffffff;
+  font-size: 10vh;
+  font-weight:300;
+  line-height: 0.4;
+}
+a:hover{
+  background-color: #FFE4C4;
+  text-decoration: underline  blue;
+  font-weight:300;
+}
+
+a:visited {
+  background-color: #FFE4C4;
+}
+p{
+  display:inline;
+  font-size: 3vh;
+  color:#ef23de;
+}
+
+#title{
+ position:static;
+}
+
+#headshot_Wrapper{
+  height:50vh;
+  width:70vw;
+  position:relative;
+}
+
+#headshot_Wrapper img{
+  position:absolute;
+  width: 150px;
+  height: 150px;
+  opacity:0.7;
+/*   cursor: pointer; */
+}
+
+#headshot_Wrapper img:hover{
+opacity:1;
+}
+
+#headshot_Wrapper img:active{
+opacity:1;
+}
+
+#interview{
+  position:relative;
+}
+
+#name{
+  font-size: 6vh;
+  opacity:0.5;
+}
+  
+#socialMedia{
+  color:#ef23de;
+  opacity:0.5;
+  font-size: 2vh;
+}
+
+#img_Wrapper img{
+  height: 100vh;
+  width:auto;
+/*   width: 25vw; */
+  padding:20px;
+}
+
+#credit{
+  color:#ffffff;
+  font-size: 2vh;
+}
+.answers{
+/*   background-color: #FFE4C4; */
+  color:#dd9626;
+  font-weight:100;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 60px;
+  border: none;
+  outline: none;
+  background-color:transparent;
+  opacity:0.6;
+  color: #5731ef;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  opacity:1;
+/*   background-color: #555; */
+}
+
+@media only screen and (max-device-width: 480px) {
+body {
+  padding-left:1em;
+  padding-right:1em;
+}
+
+ h1{
+   font-size: 20vw;
+    line-height: 0.9;
+  }
+
+h2{
+  font-size: 10vw;
+   line-height: 0.9;
+}
+  p{
+  font-size: 4vw;
+}
+  #headshot_Wrapper{
+  height:300px;
+/*   width:60vw; */
+  position:relative;
+}
+  #headshot_Wrapper img{
+  position:absolute;
+  width: 15vw;
+  height: 15vw;
+}
+  
+#img_Wrapper img{
+  height: auto;
+  width:70vw;
+}
+   
+#myBtn {
+  right: 5px;
+  font-size: 30px;
+}
