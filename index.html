@@ -18,14 +18,15 @@
       
     </head>
     <body>
+     <a href="https://lithium.gallery/" target="_blank"> <img class="logo" src="https://cdn.glitch.com/3a58e612-b4db-4681-95fd-d7061c63fb91%2Flogo.png?v=1620141352722"> </a>
       <div id="title">
         <h1>
           Special Feature
         </h1>
-        <h1>
+        <h2>
           IMPACT 2021
-        </h1>
-        <br />
+        </h2>
+        <br /><br>
         <p>
           Unconventional circumstances make for unconventional art. This year’s
           IMPACT Performance Festival took place virtually on the weekend of
@@ -35,8 +36,8 @@
         </p>
         <br >
         <p style="font-size:2vh;  font-weight:100; opacity:1;">
-          May 3 - 10, each day there will be one interview to be released.
-          <br />May 10 - 19, Limited-run Replay. <br /><br>*Click the icon below to
+          May 3 - 10, 2021 a daily interview release.
+          <br />May 10 - 19, 2021 Limited-run Replay. <br /><br>*Click the icon below to
           read each artist interview.
         </p>
         <hr style="color:white;opacity:0.5;" />
@@ -97,6 +98,17 @@
         </div>
         <p id="credit"></p>
       </div>
+      <br>
+      <hr tyle="color:white;opacity:0.5;" >
+      <p style="font-size:2vh;  font-weight:100; opacity:0.7;">  
+     TNL is an online platform for time-based art, experimental web-based curation, digital residencies and a multimedia editorial section that promotes time-based artists and exhibitions mainly in Chicago and occasionally abroad. 
+      </p><br><br>
+     <p style="font-size:2vh;  font-weight:100; opacity:0.7;">
+        @2021 THENEULITHIUM ALL RIGHTS RESERVED
+      </p><br>
+      <a class="socialmediaIcon" href="https://www.facebook.com/theneulithium/" target="_blank"><i class="fab fa-facebook"></i></a> 
+      <a class="socialmediaIcon" href="https://www.instagram.com/theneulithium/" target="_blank"><i class="fab fa-instagram" ></i></a> 
+      <a class="socialmediaIcon" href="https://theneulithium.tumblr.com/" target="_blank" ><i class="fab fa-tumblr"></i></a><br>
 
       <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
       <script>
@@ -377,7 +389,7 @@
             document.getElementById("credit").innerHTML = data[1].credit;
           });
 
-          if (n > day4) {
+          if (n >= day4) {
             img3.addEventListener("click", function() {
               document.getElementById("name").innerHTML = data[2].yourFullName;
               document.getElementById("a1").innerHTML = data[2].Q1;

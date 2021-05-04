@@ -11,31 +11,32 @@ body {
 
 h1 {
   color: #5731ef;
-  font-size: 22vh;
-  font-weight:500;
+  font-size: 12vh;
+  font-weight:400;
    line-height: 0.7;
 }
 h2{
-  color: #ffffff;
-  font-size: 10vh;
-  font-weight:300;
+  color: #5731ef;
+  font-size: 22vh;
+  font-weight:500;
   line-height: 0.4;
+   margin: 0;
 }
 a:hover{
   background-color: #FFE4C4;
-  text-decoration: underline  blue;
   font-weight:300;
 }
 
-a:visited {
-  background-color: #FFE4C4;
-}
 p{
   display:inline;
   font-size: 3vh;
   color:#ef23de;
 }
 
+.logo{
+  width:150px;
+  filter: invert(1);
+}
 #title{
  position:static;
 }
@@ -116,6 +117,14 @@ opacity:1;
 /*   background-color: #555; */
 }
 
+.fab{
+  color:#ef23de;
+}
+.socialmediaIcon a:hover{
+  background-color: transparent;
+  text-decoration: none;
+}
+
 @media only screen and (max-device-width: 480px) {
 body {
   padding-left:1em;
@@ -123,13 +132,14 @@ body {
 }
 
  h1{
-   font-size: 20vw;
+   font-size: 9vw;
     line-height: 0.9;
   }
 
 h2{
-  font-size: 10vw;
+  font-size: 20vw;
    line-height: 0.9;
+   margin: 0;
 }
   p{
   font-size: 4vw;
