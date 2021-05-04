@@ -11,7 +11,7 @@ body {
 
 h1 {
   color: #5731ef;
-  font-size: 25vh;
+  font-size: 22vh;
   font-weight:500;
    line-height: 0.6;
 }
@@ -80,7 +80,8 @@ opacity:1;
 #img_Wrapper img{
   height: auto;
   width:80vw;
-  padding:20px;
+/*   width: 25vw; */
+  padding:10px;
 }
 
 #credit{
